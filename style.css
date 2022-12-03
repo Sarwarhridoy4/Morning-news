@@ -1,5 +1,5 @@
 /* Reset css */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,12 +7,13 @@
 }
 
 /* header section */
-.header{
+.header {
     background: #000;
     margin: 0 auto;
     min-height: 40vh;
-    
+
 }
+
 .header-content {
     height: 100%;
     width: 100%;
@@ -21,6 +22,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .header-content button {
     text-decoration: none;
     color: #ffff;
@@ -34,7 +36,8 @@
     justify-content: center;
     margin: 0;
 }
-.text-side{
+
+.text-side {
     width: 50vw;
     padding: 20px;
     display: flex;
@@ -55,7 +58,8 @@
     font-weight: 400;
     font-size: 1rem;
 }
-.image-side{
+
+.image-side {
     width: 50vw;
     height: 50vh;
     display: flex;
@@ -67,24 +71,231 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-.image-side img{
-    width: 40%;
+
+/* main start */
+.main {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 10vh;
+    display: flex;
 }
+
+
+/* side-bar design */
+.side-bar {
+    width: 300px;
+    height: 250px;
+    background: #161616;
+
+}
+
+/* this design will only visible in tab */
+.side-bar-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+/* side-bar button tab */
+.side-bar-tab button {
+    text-decoration: none;
+    color: #DD0000;
+    background: #ffff;
+    height: 60px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+/* side-bar button tab */
+.side-bar button {
+    text-decoration: none;
+    color: #DD0000;
+    background: #ffff;
+    height: 60px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+.side-bar button a {
+    text-decoration: none;
+}
+
+/* for blog selected */
+#blog {
+    background: #dd0000;
+    color: #ffff;
+}
+
+/* blog design start here */
+.container {
+    display: flex;
+
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.blog {
+    width: 250px;
+    height: auto;
+    background: rgb(38, 233, 240);
+    border-radius: 10px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.blog-cover {
+    width: 100%;
+}
+
+.blog-cover img {
+    width: 100%;
+}
+
+.blog-text {
+    padding: 8px;
+}
+
+.blog-text button {
+    margin-left: 15px;
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid black;
+    outline: none;
+}
+
+.blog-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+/* blog design end here */
+/* footer design start here */
+.footer {
+    min-height: 40vh;
+    width: 100%;
+    background: #000;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.footer hr {
+    border: 0.5px solid #2C2C2C;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav li {
+    list-style: none;
+}
+
+.footer-nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 20px 20px 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+}
+
+/* footer design end here */
+
 
 /* media queries */
-@media only screen and (max-width: 600px) {
-    body{
-        background: rgb(110, 194, 233);
+@media only screen and (max-width: 768px) {
+    body {
+        background: rgba(22, 133, 0, 0.479);
     }
-    .header-content{
+
+    .header-content {
         flex-direction: column;
     }
-    .text-side{
+
+    .text-side {
         width: 100vh;
     }
-    .image-side{
+
+    .image-side {
         width: 100vh;
+    }
+
+    .side-bar {
+        display: none;
+    }
+
+    /* this design will only visible in tab */
+    .side-bar-tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 10px;
+        padding: 10px;
     }
 }
+@media only screen and (max-width: 425px) {
+    body {
+        background: rgb(110, 194, 233);
+    }
 
+    .header-content {
+        flex-direction: column;
+    }
+
+    .text-side {
+        width: 100vw;
+    }
+
+    .image-side {
+        width: 100vw;
+    }
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    /* this design will only visible in tab */
+    .side-bar-tab {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
 
